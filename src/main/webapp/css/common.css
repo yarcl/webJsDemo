@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "微软雅黑";
+}
+
+body{
+    background-color: rgba(255,255,255, 0.2);
+    overflow: hidden;
+}
+
+.login{
+    width: 400px;
+    height: auto;
+    position: relative;
+    margin: 350px auto;
+    padding-top: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-color: #faa732;
+    background: #a9dba9;
+}
+
+.logo {
+    width: 180px;
+    height:40px;
+    margin: 0 auto;
+}
+
+.logo .logo-img{
+    width: 40px;
+    height:40px;
+    float: left;
+}
+
+.logo .logo-title{
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.login .login-form{
+    width:440px;
+    margin-top:10px;
+}
+
+.login-form .login-form-container .form-input li span,input{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.login .login-form .login-form-container .form-input .form-sub{
+    width: 140px;
+    height:32px;
+    background-image: url("../img/submit.jpg");
+    background-position: -31px -32px;
+    margin:15px auto;
+    margin-left: 35px;
+    border-radius: 14px;
+}
+
+.login .login-form .login-form-container .form-input .input-content{
+    width:250px;
+    margin: 0 auto;
+}
+
