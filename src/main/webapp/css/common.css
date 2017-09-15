@@ -6,7 +6,8 @@
 }
 
 body{
-    background-color: rgba(255,255,255, 0.2);
+    background: url("../img/backimg.jpg") no-repeat;
+    background-position: 50% -50%;
     overflow: hidden;
 }
 
@@ -14,11 +15,10 @@ body{
     width: 400px;
     height: auto;
     position: relative;
-    margin: 350px auto;
+    margin: 150px auto;
     padding-top: 20px;
-    border: 2px solid rgba(255,255,255,0.2);
-    border-color: #faa732;
-    background: #a9dba9;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(116,225,231,0);
 }
 
 .logo {

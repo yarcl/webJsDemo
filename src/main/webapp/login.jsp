@@ -15,24 +15,26 @@
 </head>
 <body>
     <div class="login">
-        <div class="logo">
-            <div class="logo-img">
-                <img src="img/global.logo" width="40" height="40">
-            </div>
-            <div class="logo-title">
-                <strong>登录系统后台</strong>
-            </div>
-        </div>
-        <div class="login-form">
-            <form action="" method="post" class="login-form-container">
-                <div class="form-input">
-                    <ul class="input-content">
-                        <li><span>用&nbsp;&nbsp;&nbsp;户:</span><input type="text"></li>
-                        <li><span>密&nbsp;&nbsp;&nbsp;码:</span><input type="text"></li>
-                        <li class="form-sub"><input type="image" value=""></li>
-                    </ul>
+        <div class="backimg">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="img/global.logo" width="40" height="40">
                 </div>
-            </form>
+                <div class="logo-title">
+                    <strong>登录系统后台</strong>
+                </div>
+            </div>
+            <div class="login-form">
+                <form action="" method="post" class="login-form-container">
+                    <div class="form-input">
+                        <ul class="input-content">
+                            <li><span>用&nbsp;&nbsp;&nbsp;户:</span><input type="text"></li>
+                            <li><span>密&nbsp;&nbsp;&nbsp;码:</span><input type="text"></li>
+                            <li class="form-sub"><input type="image" value=""></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>
