@@ -25,11 +25,11 @@
                 </div>
             </div>
             <div class="login-form">
-                <form action="" method="post" class="login-form-container">
+                <form action="./loginServlet.do" method="post" class="login-form-container">
                     <div class="form-input">
                         <ul class="input-content">
-                            <li><span>用&nbsp;&nbsp;&nbsp;户:</span><input type="text"></li>
-                            <li><span>密&nbsp;&nbsp;&nbsp;码:</span><input type="text"></li>
+                            <li><span>用&nbsp;&nbsp;&nbsp;户:</span><input type="text" name="username"></li>
+                            <li><span>密&nbsp;&nbsp;&nbsp;码:</span><input type="password" name="password"></li>
                             <li class="form-sub"><input type="image" value=""></li>
                         </ul>
                     </div>

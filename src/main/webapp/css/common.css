@@ -7,8 +7,9 @@
 
 body{
     background: url("../img/backimg.jpg") no-repeat;
-    background-position: 50% -50%;
+    background-position: 0 0;
     overflow: hidden;
+    color: #fff;
 }
 
 .login{
@@ -61,6 +62,10 @@ body{
     border-radius: 14px;
 }
 
+.login .login-form .login-form-container .form-input .form-sub input {
+    width:140px;
+    height:32px;
+}
 .login .login-form .login-form-container .form-input .input-content{
     width:250px;
     margin: 0 auto;
