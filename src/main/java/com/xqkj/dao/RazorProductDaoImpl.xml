@@ -20,7 +20,7 @@
 
 		<select id="getRazorProductByUserId"
 			resultMap="rm">
-				select * from razor_product where user_id = #{param1}
+				select * from RAZOR_PRODUCT where user_id = #{param1}
 		</select>
 		
 	</mapper>

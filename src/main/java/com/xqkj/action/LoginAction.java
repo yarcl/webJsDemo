@@ -30,11 +30,11 @@ public class LoginAction{
 
         User user = userService.login(username,password);
         //System.out.println(user.getName());
-        if(user.getId()!=0){
+        if(user!=null){
             mav.addObject("user", user);
             List<RazorProduct> razorProductList = razorProductService.getRazorProductByUserId(user.getId()+"");
             mav.addObject("razorProductList", razorProductList);
-            mav.setViewName("main.jsp");
+            mav.setViewName("index.jsp");
         }
 
         return mav;

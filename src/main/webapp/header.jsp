@@ -7,9 +7,9 @@
 --%>
 <%@ page language="java" contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="css/main.css" type="text/css">
-<div class="nav navbar">
+<div class="razor-nav navbar">
 
     <div class="logo"><img src="img/global.logo"/><span class="logo-title">南京西桥科技</span></div>
     <div class="nav-right">
