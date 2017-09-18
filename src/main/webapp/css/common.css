@@ -47,9 +47,10 @@ body{
     margin-top:10px;
 }
 
-.login-form .login-form-container .form-input li span,input{
+.login-form .login-form-container .form-input .in span, input{
     margin-right: 10px;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    margin-bottom: 10px;
 }
 
 .login .login-form .login-form-container .form-input .form-sub{
@@ -57,9 +58,10 @@ body{
     height:32px;
     background: url("../img/submit.jpg") no-repeat;
     background-position: -31px -32px;
-    margin:15px auto;
+
     margin-left: 35px;
     border-radius: 14px;
+    margin-bottom: 20px;
 }
 
 .login .login-form .login-form-container .form-input .form-sub input {
@@ -68,6 +70,7 @@ body{
     background-color: rgba(255,255,255,0);
     border:0;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 .login .login-form .login-form-container .form-input .input-content{
     width:250px;
