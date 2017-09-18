@@ -35,18 +35,7 @@
 	      <!-- 加载mybatis  核心配置文件 -->
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
 	</bean>
-	
-	<!-- UserDao配置 -->
-	<bean id="ud" class="org.mybatis.spring.mapper.MapperFactoryBean">
-	      <!-- 创建实现类  是哪个 接口的 -->
-	     <property name="mapperInterface">
-	        <value>com.xqkj.dao.UserDao</value>
-	     </property>
-	     <!-- （根据sessionFactory）引入配置文件 -->
-	     <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
-	</bean>
-	<!-- us -->
-	<bean id="userService" class="com.xqkj.service.impl.UserServiceImpl">
-	    <property name="userDao" ref="ud"></property>
-	</bean>
+
+	<import resource="applicationContext-bean.xml"/>
+
 </beans>

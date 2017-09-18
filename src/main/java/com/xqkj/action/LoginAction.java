@@ -1,26 +1,42 @@
 package com.xqkj.action;
 
+import com.xqkj.bean.RazorProduct;
 import com.xqkj.bean.User;
+import com.xqkj.service.RazorProductService;
 import com.xqkj.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/")
+@SessionAttributes({"user"})
 public class LoginAction{
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/login.do")
-    public String login(String username, String password){
+    @Autowired
+    private RazorProductService razorProductService;
 
-        System.out.println(username+":"+password);
+    @RequestMapping("/login.do")
+    public String login(String username, String password, ModelAndView mav){
+
+        //System.out.println(username+":"+password);
 
         User user = userService.login(username,password);
-        System.out.println(user.getName());
-        return null;
+        //System.out.println(user.getName());
+        if(user.getId()!=0){
+            mav.addObject("user", user);
+            List<RazorProduct> razorProductList = razorProductService.getRazorProductByUserId(user.getId()+"");
+            mav.addObject("razorProductList", razorProductList);
+        }
+
+        return "index.jsp";
     }
 
 }
