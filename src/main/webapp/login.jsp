@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="login-form">
-                <form action="login.do" method="post" class="login-form-container">
+                <form action="loginServlet.do" method="post" class="login-form-container">
                     <div class="form-input">
                         <ul class="input-content">
                             <li class="in"><span>用&nbsp;&nbsp;&nbsp;户:</span><input type="text" name="username"></li>
