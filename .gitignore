@@ -3,4 +3,5 @@
 *.iml
 demo.iml
 target/
+./src/main/resources/db.properties
 
