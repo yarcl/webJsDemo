@@ -14,7 +14,6 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
-@SessionAttributes({"user"})
 public class LoginAction{
 
     @Autowired
@@ -24,7 +23,7 @@ public class LoginAction{
     private RazorProductService razorProductService;
 
     @RequestMapping("/login.do")
-    public String login(String username, String password, ModelAndView mav){
+    public ModelAndView login(String username, String password, ModelAndView mav){
 
         //System.out.println(username+":"+password);
 
@@ -34,9 +33,10 @@ public class LoginAction{
             mav.addObject("user", user);
             List<RazorProduct> razorProductList = razorProductService.getRazorProductByUserId(user.getId()+"");
             mav.addObject("razorProductList", razorProductList);
+            mav.setViewName("main.jsp");
         }
 
-        return "index.jsp";
+        return mav;
     }
 
 }

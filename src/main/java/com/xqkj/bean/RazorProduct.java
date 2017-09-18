@@ -1,5 +1,6 @@
 package com.xqkj.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -59,8 +60,13 @@ public class RazorProduct {
         this.description = description;
     }
 
-    public Date getDate() {
-        return date;
+    public String getDate() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        if(date!=null){
+            return sdf.format(date);
+        } else {
+            return null;
+        }
     }
 
     public void setDate(Date date) {
