@@ -14,6 +14,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
+@SessionAttributes("user")
 public class LoginAction{
 
     @Autowired

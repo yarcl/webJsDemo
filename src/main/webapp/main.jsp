@@ -11,21 +11,12 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Title</title>
+    <title>ProdutList's Page</title>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 <body>
-    <div class="nav navbar">
-
-        <div class="logo"><img src="img/global.logo"/><span class="logo-title">南京西桥科技</span></div>
-        <div class="nav-right">
-            <ul>
-                <li><span class="head-bk"></span><a href="#">${user.name}</a></li>
-                <li><a href="#">退出</a></li>
-            </ul>
-        </div>
-    </div>
+    <jsp:include page="common.jsp"></jsp:include>
     <div class="product-list">
 
         <div class="product-title">
