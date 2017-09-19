@@ -11,12 +11,12 @@
     <div class="product-content">
         <table class="table table-bordered table-hover">
             <thead>
-                <th width="16.6%">编号</th>
-                <th width="16.6%">名称</th>
-                <th width="16.6%">描述</th>
-                <th width="16.6%">时间</th>
-                <th width="16.6%">appKey</th>
-                <th width="16.6%">操作</th>
+                <th width="8%">编号</th>
+                <th width="8%">名称</th>
+                <th width="20%">描述</th>
+                <th width="20%">时间</th>
+                <th width="20%">appKey</th>
+                <th width="34%">操作</th>
             </thead>
             <c:forEach var="item" items="${razorProductList}">
                 <tr>
@@ -25,7 +25,11 @@
                     <td>${item.description}</td>
                     <td>${item.date}</td>
                     <td>${item.productKey}</td>
-                    <td><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">删除</a></td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-info">修改</a>
+                        <a href="#" class="btn btn-sm btn-danger">删除</a>
+                        <a href="#" class="btn btn-sm btn-warning">关闭采集</a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>

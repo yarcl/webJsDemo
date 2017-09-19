@@ -24,16 +24,17 @@
                     </a>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath}/myProductInfo.do?userId=${user.id}" target="product-main">
-                        <i class="glyphicon glyphicon-tower"></i>
-                        我的应用
+                    <a href="#systemSetting1" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-tasks"></i>
+                        应用管理
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
                     </a>
-                </li>
-                <li>
-                    <a href="${pageContext.request.contextPath}/page/user/personInfo.jsp" target="product-main">
-                        <i class="glyphicon glyphicon-user"></i>
-                        个人信息
-                    </a>
+                    <ul id="systemSetting1" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        <li><a href="${pageContext.request.contextPath}/myProductInfo.do?userId=${user.id}" target="product-main">
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                            我的应用
+                        </a></li>
+                    </ul>
                 </li>
                 <%--<li>
                     <a href="#">
@@ -57,12 +58,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="glyphicon glyphicon-fire"></i>
-                        关于系统
-                    </a>
-                </li>
-                <li>
                     <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse">
                         <i class="glyphicon glyphicon-cog"></i>
                         系统管理
@@ -72,11 +67,29 @@
                         <li><a href="#"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
                         <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>菜单管理</a></li>
                         <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>角色管理</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-edit"></i>修改密码</a></li>
                         <%--<li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>日志查看</a></li>--%>
                     </ul>
                 </li>
+                <li>
+                    <a href="#systemSetting2" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-tag"></i>
+                        个人中心
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul id="systemSetting2" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        <li><a href="${pageContext.request.contextPath}/page/user/personInfo.jsp" target="product-main">
+                            <i class="glyphicon glyphicon-user"></i>个人信息</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-edit"></i>修改密码</a></li>
+                        <%--<li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>日志查看</a></li>--%>
+                    </ul>
 
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-fire"></i>
+                        关于系统
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="col-md-10">

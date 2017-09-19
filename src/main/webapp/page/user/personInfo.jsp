@@ -8,9 +8,14 @@
     </div>
     <div class="person-info-content">
         <table class="person-table table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center">个人信息</th>
+                </tr>
+            </thead>
             <tr>
-                <td>ID</td>
-                <td>${user.id}</td>
+                <td width="50%">ID</td>
+                <td width="50%">${user.id}</td>
             </tr>
             <tr>
                 <td>用户名</td>
@@ -27,6 +32,9 @@
             <tr>
                 <td>状态</td>
                 <td>${user.isActive=='1'?'激活':'停用'}</td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="editPersonInfo.jsp" class="btn btn-primary btn-info">修改</a></td>
             </tr>
         </table>
     </div>
