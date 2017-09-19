@@ -8,15 +8,15 @@
 <%@ page language="java" contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/left.css" type="text/css">
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/left.css" type="text/css">
+<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2">
-            <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
+            <ul id="main-nav" class="nav nav-tabs nav-stacked">
                 <li class="active">
                     <a href="#">
                         <i class="glyphicon glyphicon-th-large"></i>
@@ -24,20 +24,18 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-cog"></i>
-                        系统管理
-                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    <a href="${pageContext.request.contextPath}/myProductInfo.do?userId=${user.id}" target="product-main">
+                        <i class="glyphicon glyphicon-tower"></i>
+                        我的应用
                     </a>
-                    <ul id="systemSetting" class="nav nav-list collapse secondmenu" style="height: 0px;">
-                        <li><a href="#"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>菜单管理</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>角色管理</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-edit"></i>修改密码</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>日志查看</a></li>
-                    </ul>
                 </li>
                 <li>
+                    <a href="${pageContext.request.contextPath}/page/user/personInfo.jsp" target="product-main">
+                        <i class="glyphicon glyphicon-user"></i>
+                        个人信息
+                    </a>
+                </li>
+                <%--<li>
                     <a href="#">
                         <i class="glyphicon glyphicon-credit-card"></i>
                         物料管理
@@ -50,7 +48,7 @@
                         分发配置
                         <span class="label label-warning pull-right">5</span>
                     </a>
-                </li>
+                </li>--%>
 
                 <li>
                     <a href="#">
@@ -64,11 +62,25 @@
                         关于系统
                     </a>
                 </li>
+                <li>
+                    <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        系统管理
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul id="systemSetting" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        <li><a href="#"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>菜单管理</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>角色管理</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-edit"></i>修改密码</a></li>
+                        <%--<li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>日志查看</a></li>--%>
+                    </ul>
+                </li>
 
             </ul>
         </div>
         <div class="col-md-10">
-            <jsp:include page="main.jsp"></jsp:include>
+            <iframe src="page/user/personInfo.jsp" name="product-main" frameborder="0"  width="100%" height="600" style="border-left: solid cornsilk"/>
         </div>
     </div>
 </div>

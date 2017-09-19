@@ -8,7 +8,7 @@ body{
 }
 
 .razor-nav{
-    background-color: #000;
+    background-color: #3079e6;
     width:100%;
     height: 53px;
     -webkit-border-radius: 8px;
@@ -19,7 +19,8 @@ body{
 .razor-nav .logo img{
     width:53px;
     height: 53px;
-    margin-top: -13px;
+    margin-top: -14px;
+    margin-left: -2px;
 }
 
 .razor-nav .logo .logo-title{
@@ -50,15 +51,14 @@ body{
 }
 
 .product-list .product-title{
+    height: 40px;
     margin-left: 20px;
+    border-bottom: solid;
+    border-bottom-color: #71baf1;
 }
 
 .product-list .product-title div{
     float: left;
-}
-
-.product-list .product-title .razor-btn{
-
 }
 
 .product-list .product-title .razor-btn div{
@@ -70,7 +70,7 @@ body{
 }
 
 .product-list .product-content{
-    margin: auto 20px;
+    margin: 20px 20px;
     background-color: #fff;
     clear: both;
 }

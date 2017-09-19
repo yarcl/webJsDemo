@@ -12,11 +12,12 @@
 <head>
     <meta charset="utf-8"/>
     <title>ProdutList's Page</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" type="text/css">
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
-    <jsp:include page="left.jsp"></jsp:include>
+    <div style="width: 1280px;margin: 0 auto; background-color: rgba(0,0,0,0.1)">
+        <jsp:include page="header.jsp"></jsp:include>
+        <jsp:include page="left.jsp"></jsp:include>
+    </div>
 </body>
 </html>

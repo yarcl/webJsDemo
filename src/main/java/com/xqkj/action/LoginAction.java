@@ -20,8 +20,7 @@ public class LoginAction{
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private RazorProductService razorProductService;
+
 
     @RequestMapping("/login.do")
     public ModelAndView login(String username, String password, ModelAndView mav){
@@ -31,12 +30,11 @@ public class LoginAction{
         User user = userService.login(username,password);
         //System.out.println(user.getName());
         if(user!=null){
+            user.setLoginPwd("");
             mav.addObject("user", user);
-            List<RazorProduct> razorProductList = razorProductService.getRazorProductByUserId(user.getId()+"");
-            mav.addObject("razorProductList", razorProductList);
+            //mav.setViewName("myProductInfo.do?userId="+user.getId());
             mav.setViewName("index.jsp");
         }
-
         return mav;
     }
 

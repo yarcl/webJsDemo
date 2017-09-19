@@ -76,3 +76,6 @@ body{
     margin: 0 auto;
 }
 
+.login .login-form .login-form-container .form-input .input-content li{
+    list-style: none;
+}
