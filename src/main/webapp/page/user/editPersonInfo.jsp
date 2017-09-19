@@ -40,7 +40,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><a href="#"><button class="btn btn-primary btn-info" type="submit">修改</button></a></td>
+                    <td colspan="2">
+                        <a href="#"><button class="btn btn-primary btn-info" type="submit">修改</button></a>
+                        <a href="javascript:history.go(-1);"><button class="btn btn-primary btn-info" type="button">返回</button></a>
+                    </td>
                 </tr>
             </form>
         </table>

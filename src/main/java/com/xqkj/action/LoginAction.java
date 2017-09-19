@@ -4,12 +4,15 @@ import com.xqkj.bean.RazorProduct;
 import com.xqkj.bean.User;
 import com.xqkj.service.RazorProductService;
 import com.xqkj.service.UserService;
+import org.apache.shiro.web.session.HttpServletSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -38,4 +41,14 @@ public class LoginAction{
         return mav;
     }
 
+    @RequestMapping("/loginOut.do")
+    public ModelAndView loginOut(ModelAndView mav, HttpServletRequest request){
+        HttpSession session = request.getSession();
+        if(session!=null){
+            System.out.print(((User)session.getAttribute("user")).getName());
+            session.removeAttribute("user");
+        }
+        mav.setViewName("/login.jsp");
+        return mav;
+    }
 }
