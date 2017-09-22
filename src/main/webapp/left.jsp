@@ -79,7 +79,7 @@
                     <ul id="systemSetting2" class="nav nav-list collapse secondmenu" style="height: 0px;">
                         <li><a href="${pageContext.request.contextPath}/page/user/personInfo.jsp" target="product-main">
                             <i class="glyphicon glyphicon-user"></i>个人信息</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-edit"></i>修改密码</a></li>
+                        <li><a href="${pageContext.request.contextPath}/page/user/editPassword.jsp" target="product-main"><i class="glyphicon glyphicon-edit"></i>修改密码</a></li>
                         <%--<li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>日志查看</a></li>--%>
                     </ul>
 

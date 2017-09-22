@@ -18,5 +18,23 @@
 				select * from user where login_name = #{param1} and
 				login_pwd = #{param2}
 		</select>
+
+        <update id="updateUser" parameterType="com.xqkj.bean.User">
+
+            update user set login_name = #{loginName, jdbcType=VARCHAR},name = #{name},
+                            role_id = #{roleId}, is_active = #{isActive} where id = #{id}
+
+        </update>
+
+        <select id="getUserById" resultMap="rm">
+            select * from user where id = #{id}
+        </select>
+
+        <update id="updatePassword">
+
+            update user set login_pwd = #{param2, jdbcType=VARCHAR}
+                where id = #{param1}
+
+        </update>
 		
 	</mapper>

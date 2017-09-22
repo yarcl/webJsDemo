@@ -34,7 +34,7 @@
                 <td>${user.isActive=='1'?'激活':'停用'}</td>
             </tr>
             <tr>
-                <td colspan="2"><a href="editPersonInfo.jsp" class="btn btn-primary btn-info">修改</a></td>
+                <td colspan="2"><a href="${pageContext.request.contextPath}/page/user/editPersonInfo.jsp" class="btn btn-primary btn-info">修改</a></td>
             </tr>
         </table>
     </div>

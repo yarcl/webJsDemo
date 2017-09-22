@@ -3,8 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <!--<properties resource="com/xqkj/dao/mapper/"></properties>-->
   	<mappers>
-  		<mapper resource="com/xqkj/dao/UserDaoImpl.xml"></mapper>
-		<mapper resource="com/xqkj/dao/RazorProductDaoImpl.xml"></mapper>
+  		<mapper resource="com/xqkj/dao/mapper/UserDaoImpl.xml"></mapper>
+		<mapper resource="com/xqkj/dao/mapper/RazorProductDaoImpl.xml"></mapper>
   	</mappers>
 </configuration>

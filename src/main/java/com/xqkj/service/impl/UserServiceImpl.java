@@ -18,4 +18,16 @@ public class UserServiceImpl implements UserService {
     public User login(String username, String password) {
         return userDao.login(username, password);
     }
+
+    public int updateUser(User user) {
+        return userDao.updateUser(user);
+    }
+
+    public User getUserById(int id) {
+        return userDao.getUserById(id);
+    }
+
+    public int updatePassword(String userId, String newPwd) {
+        return userDao.updatePassword(userId, newPwd);
+    }
 }

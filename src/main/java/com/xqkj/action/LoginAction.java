@@ -25,7 +25,7 @@ public class LoginAction{
 
 
 
-    @RequestMapping("/login.do")
+    @RequestMapping("login.do")
     public ModelAndView login(String username, String password, ModelAndView mav){
 
         //System.out.println(username+":"+password);
@@ -37,6 +37,8 @@ public class LoginAction{
             mav.addObject("user", user);
             //mav.setViewName("myProductInfo.do?userId="+user.getId());
             mav.setViewName("index.jsp");
+        } else {
+            mav.setViewName("login.jsp");
         }
         return mav;
     }
@@ -45,7 +47,7 @@ public class LoginAction{
     public ModelAndView loginOut(ModelAndView mav, HttpServletRequest request){
         HttpSession session = request.getSession();
         if(session!=null){
-            System.out.print(((User)session.getAttribute("user")).getName());
+            //System.out.print(((User)session.getAttribute("user")).getName());
             session.removeAttribute("user");
         }
         mav.setViewName("/login.jsp");
