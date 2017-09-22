@@ -14,7 +14,7 @@
             </tr>
             </thead>
             <form action="${pageContext.request.contextPath}/user/editPassword.do" method="post">
-                <input type="hidden" name="userId" value="${user.id}">
+                <input type="hidden" name="userId" value="${user.userId}">
                 <tr>
                     <td width="50%">原密码:</td>
                     <td width="50%"><input type="password" name="oldPwd" value="" placeholder="原密码" required></td>

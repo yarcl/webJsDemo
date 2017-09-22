@@ -1,8 +1,10 @@
 package com.xqkj.service.impl;
 
-import com.xqkj.bean.User;
+import com.xqkj.bean.RazorUser;
 import com.xqkj.dao.UserDao;
 import com.xqkj.service.UserService;
+
+import java.util.List;
 
 public class UserServiceImpl implements UserService {
     private UserDao userDao;
@@ -15,15 +17,19 @@ public class UserServiceImpl implements UserService {
         this.userDao = userDao;
     }
 
-    public User login(String username, String password) {
+    public RazorUser login(String username, String password) {
         return userDao.login(username, password);
     }
 
-    public int updateUser(User user) {
+    public List<RazorUser> getAllUsersInfo() {
+        return userDao.getAllUsersInfo();
+    }
+
+    public int updateUser(RazorUser user) {
         return userDao.updateUser(user);
     }
 
-    public User getUserById(int id) {
+    public RazorUser getUserById(int id) {
         return userDao.getUserById(id);
     }
 

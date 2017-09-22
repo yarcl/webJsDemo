@@ -1,7 +1,7 @@
 package com.xqkj.action;
 
 import com.xqkj.bean.RazorProduct;
-import com.xqkj.bean.User;
+import com.xqkj.bean.RazorUser;
 import com.xqkj.service.RazorProductService;
 import com.xqkj.service.UserService;
 import org.apache.shiro.web.session.HttpServletSession;
@@ -30,7 +30,7 @@ public class LoginAction{
 
         //System.out.println(username+":"+password);
 
-        User user = userService.login(username,password);
+        RazorUser user = userService.login(username,password);
         //System.out.println(user.getName());
         if(user!=null){
             user.setLoginPwd("");
