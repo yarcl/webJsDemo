@@ -1,8 +1,10 @@
 package com.xqkj.service.impl;
 
+import com.xqkj.bean.PageBean;
 import com.xqkj.bean.RazorUser;
 import com.xqkj.dao.UserDao;
 import com.xqkj.service.UserService;
+import com.xqkj.util.CaculatePage;
 
 import java.util.List;
 
@@ -21,8 +23,8 @@ public class UserServiceImpl implements UserService {
         return userDao.login(username, password);
     }
 
-    public List<RazorUser> getAllUsersInfo() {
-        return userDao.getAllUsersInfo();
+    public List<RazorUser> getAllUsersInfo(PageBean pageBean) {
+        return userDao.getAllUsersInfo(CaculatePage.caculateStart(pageBean), CaculatePage.caculateEnd(pageBean));
     }
 
     public int updateUser(RazorUser user) {
@@ -31,6 +33,10 @@ public class UserServiceImpl implements UserService {
 
     public RazorUser getUserById(int id) {
         return userDao.getUserById(id);
+    }
+
+    public int getUserCount() {
+        return userDao.getUserCount();
     }
 
     public int updatePassword(String userId, String newPwd) {

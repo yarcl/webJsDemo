@@ -20,6 +20,12 @@
                   <include refid="allColumn"/>
                 from
                   RAZOR_ROLE
+                limit #{param1}, #{param2}
             </select>
-		
+
+            <select id="getRoleCount" resultType="int">
+
+                select count(1) from RAZOR_ROLE
+
+            </select>
 	</mapper>

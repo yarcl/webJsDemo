@@ -53,6 +53,13 @@
             <include refid="allColumn"/>
         from
           RAZOR_USER
+        limit #{param1}, #{param2}
+
+    </select>
+
+    <select id="getUserCount" resultType="int">
+
+        select count(1) from RAZOR_USER
 
     </select>
 		

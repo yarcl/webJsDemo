@@ -20,7 +20,11 @@
 
 		<select id="getRazorProductByUserId"
 			resultMap="rm">
-				select * from RAZOR_PRODUCT where user_id = #{param1}
+				select * from RAZOR_PRODUCT where user_id = #{param1} limit #{param2} , #{param3}
 		</select>
+
+    <select id="getProductCount" resultType="int">
+        select count(1) from RAZOR_PRODUCT
+    </select>
 		
 	</mapper>

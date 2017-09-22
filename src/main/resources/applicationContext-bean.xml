@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+    <bean id="pageBean" class="com.xqkj.bean.PageBean" scope="prototype"></bean>
+
     <!-- UserDao配置 -->
     <bean id="ud" class="org.mybatis.spring.mapper.MapperFactoryBean">
         <!-- 创建实现类  是哪个 接口的 -->

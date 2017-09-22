@@ -1,8 +1,10 @@
 package com.xqkj.service.impl;
 
+import com.xqkj.bean.PageBean;
 import com.xqkj.bean.RazorProduct;
 import com.xqkj.dao.RazorProductDao;
 import com.xqkj.service.RazorProductService;
+import com.xqkj.util.CaculatePage;
 
 import java.util.List;
 
@@ -21,7 +23,11 @@ public class RazorProductServiceImpl implements RazorProductService{
         this.razorProductDao = razorProductDao;
     }
 
-    public List<RazorProduct> getRazorProductByUserId(String userId) {
-        return razorProductDao.getRazorProductByUserId(userId);
+    public int getProductCount() {
+        return razorProductDao.getProductCount();
+    }
+
+    public List<RazorProduct> getRazorProductByUserId(String userId, PageBean pageBean) {
+        return razorProductDao.getRazorProductByUserId(userId, CaculatePage.caculateStart(pageBean), CaculatePage.caculateEnd(pageBean));
     }
 }

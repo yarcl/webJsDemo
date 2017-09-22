@@ -9,8 +9,8 @@ import java.util.List;
  */
 public interface RazorProductDao {
 
-    public List<RazorProduct> getRazorProductByUserId(String userId);
+    public List<RazorProduct> getRazorProductByUserId(String userId, int startPage, int endPage);
 
 
-
+    public int getProductCount();
 }

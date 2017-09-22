@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="page" uri="http://com.xqkj/pageTag" %>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/role/roleInfo.css" type="text/css">
 <div class="role-list">
@@ -32,5 +33,8 @@
                 </tr>
             </c:forEach>
         </table>
+    </div>
+    <div class="product-page-tag">
+        <page:pageTag url="${pageContext.request.contextPath}/role/allRoleInfo.do?" page="${page}"/>
     </div>
 </div>

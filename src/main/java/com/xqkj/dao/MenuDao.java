@@ -7,5 +7,7 @@ import java.util.List;
 public interface MenuDao {
 
 
-    public List<RazorMenu> allMenuInfo();
+    public List<RazorMenu> allMenuInfo(int startPage, int endPage);
+
+    public int getMenuCount();
 }

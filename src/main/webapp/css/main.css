@@ -76,3 +76,10 @@ body{
     border-radius: 10px;
 }
 
+.product-list .product-page-tag *{
+    margin:0 auto;
+    text-align: center;
+    font-size: 14px;
+    color: blue;
+}
+

@@ -13,5 +13,7 @@ public interface UserDao {
 
     public int updatePassword(String userId, String newPwd);
 
-    public List<RazorUser> getAllUsersInfo();
+    public List<RazorUser> getAllUsersInfo(int startPage, int endPage);
+
+    public int getUserCount();
 }
