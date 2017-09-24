@@ -83,3 +83,27 @@ body{
     color: blue;
 }
 
+.product-list .product-find {
+    height: 40px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.product-list .product-find .product-condition{
+    padding-top: 15px;
+}
+
+.product-list .product-find .product-condition div{
+    float: left;
+    width: 26%;
+    text-align: center;
+}
+
+.product-list .product-find .product-condition div.special{
+    width:38%;
+}
+
+.product-list .product-find .product-condition div.img{
+    width:6%;
+    margin-top: -4px;
+}

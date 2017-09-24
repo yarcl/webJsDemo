@@ -82,3 +82,28 @@ body{
     font-size: 14px;
     color: blue;
 }
+
+.role-list .role-find {
+    height: 40px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.role-list .role-find .role-condition{
+    padding-top: 15px;
+}
+
+.role-list .role-find .role-condition div{
+    float: left;
+    width: 26%;
+    text-align: center;
+}
+
+.role-list .role-find .role-condition div.special{
+    width:38%;
+}
+
+.role-list .role-find .role-condition div.img{
+    width:6%;
+    margin-top: -4px;
+}

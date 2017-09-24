@@ -83,3 +83,28 @@ body{
     color: blue;
 }
 
+.menu-list .menu-find {
+    height: 40px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.menu-list .menu-find .menu-condition{
+    padding-top: 15px;
+}
+
+.menu-list .menu-find .menu-condition div{
+    float: left;
+    width: 26%;
+    text-align: center;
+}
+
+.menu-list .menu-find .menu-condition div.special{
+    width:38%;
+}
+
+.menu-list .menu-find .menu-condition div.img{
+    width:6%;
+    margin-top: -4px;
+}
+

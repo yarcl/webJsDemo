@@ -83,3 +83,27 @@ body{
     color: blue;
 }
 
+.admin-list .admin-find {
+    height: 40px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.admin-list .admin-find .admin-condition{
+    padding-top: 15px;
+}
+
+.admin-list .admin-find .admin-condition div{
+    float: left;
+    width: 26%;
+    text-align: center;
+}
+
+.admin-list .admin-find .admin-condition div.special{
+    width:38%;
+}
+
+.admin-list .admin-find .admin-condition div.img{
+    width:6%;
+    margin-top: -4px;
+}
