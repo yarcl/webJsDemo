@@ -46,18 +46,18 @@ public class PageTag extends TagSupport {
 		buffer.append("<table width='100%' border='0' cellspacing='0' cellpadding='0'><tr><td width='20%' height='25'>");
 		buffer.append("<table border='0' cellspacing='0' cellpadding='3'><tr>");
 		if(page.getNowPage()==1){
-			buffer.append("<td>首页&nbsp;&nbsp;上一页</td>");
+			buffer.append("<td style='color:black'>首页&nbsp;&nbsp;上一页</td>");
 		}else {
 			// 首页
 			buffer.append("<td><a href='");
 			buffer.append(url);
 			buffer.append("&nowPage=1'");
 			// 上一页 下一页
-			buffer.append(" style='color:black;'>首页</a></td> <td><a href='");
+			buffer.append(" style='color:blue;'>首页</a></td> <td><a href='");
 			buffer.append(url);
 			buffer.append("&nowPage=");
 			buffer.append(page.getNowPage() - 1);
-			buffer.append("' style='color:black;'>上一页</a></td>");
+			buffer.append("' style='color:blue;'>上一页</a></td>");
 			buffer.append("<td>");
 		}
 		buffer.append("<td>");
@@ -68,29 +68,29 @@ public class PageTag extends TagSupport {
 				buffer.append(url);
 				buffer.append("&nowPage=");
 				buffer.append(page.getNowPage() - 1);
-				buffer.append("' style='color:black;'>");
+				buffer.append("' style='color:blue;'>");
 				buffer.append("...");
 				buffer.append("</a>");
 				i = num-2;
 				flag = true;
 			}
 			if(num==i){
-				buffer.append("&nbsp;[");
+				buffer.append("&nbsp;<span style='color:black'>[");
 				buffer.append(i);
-				buffer.append("]&nbsp;");
+				buffer.append("]</span>&nbsp;");
 			}else if(i<=num+2){
 				buffer.append("&nbsp;<a href='");
 				buffer.append(url);
 				buffer.append("&nowPage=");
 				buffer.append(i);
-				buffer.append("' style='color:black;'>");
+				buffer.append("' style='color:blue;'>");
 				buffer.append((i)+"</a>&nbsp;");
 			}else if(i>num+2){
 				buffer.append("<td><a href='");
 				buffer.append(url);
 				buffer.append("&nowPage=");
 				buffer.append(page.getNowPage() + 1);
-				buffer.append("' style='color:black;'>");
+				buffer.append("' style='color:blue;'>");
 				buffer.append("...");
 				buffer.append("</a></td>");
 				break;
@@ -103,17 +103,17 @@ public class PageTag extends TagSupport {
 		}
 		buffer.append("</td>");
 		if(page.getNowPage()==page.getTotalPage()){
-			buffer.append("<td>下一页&nbsp;&nbsp;尾页</td>");
+			buffer.append("<td style='color:black'>下一页&nbsp;&nbsp;尾页</td>");
 		}else{
 			buffer.append("<td><a href='");
 			buffer.append(url);
 			buffer.append("&nowPage=");
 			buffer.append(page.getNowPage() + 1);
-			buffer.append("' style='color:black;'>下一页</a></td><td><a href='");
+			buffer.append("' style='color:blue;'>下一页</a></td><td><a href='");
 			buffer.append(url);
 			buffer.append("&nowPage=");
 			buffer.append(page.getTotalPage());
-			buffer.append("' style='color:black;'>尾页</a></td>");
+			buffer.append("' style='color:blue;'>尾页</a></td>");
 		}
 		buffer.append("</tr>");
 		buffer.append("</table>");

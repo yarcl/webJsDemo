@@ -13,9 +13,8 @@
         <form action="${pageContext.request.contextPath}/role/allRoleInfo.do" method="post">
             <div class="role-condition">
                 <div><strong>名称：</strong><input type="text" name="name" size="16"/></div>
-                <div class="special"><strong>时间：</strong><input type="text" name="starttime" size="16"/><strong>--</strong>
-                    <input type="text" name="endtime" size="16"/></div>
-                <div><strong>appKey：</strong><input type="text" name="appkey" size="16"/></div>
+                <div class="special"></div>
+                <div><strong>状态：</strong><input type="text" name="appkey" size="16"/></div>
                 <div class="img"><span class="btn btn-info">查找</span></div>
             </div>
         </form>
@@ -39,7 +38,6 @@
                         </c:if>--%>
                         <a href="#" class="btn btn-sm btn-info">修改</a>
                         <a href="#" class="btn btn-sm btn-danger">删除</a>
-                        <a href="#" class="btn btn-sm btn-warning">关闭采集</a>
                     </td>
                 </tr>
             </c:forEach>
