@@ -30,7 +30,7 @@
                         <span class="pull-right glyphicon glyphicon-chevron-down"></span>
                     </a>
                     <ul id="systemSetting1" class="nav nav-list collapse secondmenu" style="height: 0px;">
-                        <li><a href="${pageContext.request.contextPath}/myProductInfo.do?userId=${user.id}" target="product-main">
+                        <li><a href="${pageContext.request.contextPath}/myProductInfo.do?userId=${user.userId}" target="product-main">
                             <i class="glyphicon glyphicon-list-alt"></i>
                             我的应用
                         </a></li>
@@ -51,12 +51,12 @@
                     </a>
                 </li>--%>
 
-                <li>
+                <%--<li>
                     <a href="#">
                         <i class="glyphicon glyphicon-calendar"></i>
                         图表统计
                     </a>
-                </li>
+                </li>--%>
                 <li>
                     <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse">
                         <i class="glyphicon glyphicon-cog"></i>
@@ -64,9 +64,9 @@
                         <span class="pull-right glyphicon glyphicon-chevron-down"></span>
                     </a>
                     <ul id="systemSetting" class="nav nav-list collapse secondmenu" style="height: 0px;">
-                        <li><a href="#"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>菜单管理</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>角色管理</a></li>
+                        <li><a href="${pageContext.request.contextPath}/admin/allAdminUsers.do" target="product-main"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
+                        <li><a href="${pageContext.request.contextPath}/menu/allMenuInfo.do" target="product-main"><i class="glyphicon glyphicon-th-list"></i>菜单管理</a></li>
+                        <li><a href="${pageContext.request.contextPath}/role/allRoleInfo.do" target="product-main"><i class="glyphicon glyphicon-asterisk"></i>角色管理</a></li>
                         <%--<li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>日志查看</a></li>--%>
                     </ul>
                 </li>
@@ -85,7 +85,11 @@
 
                 </li>
                 <li>
-                    <a href="#">
+                    <%--<a href="${pageContext.request.contextPath}/system/systemInfo.do">
+                        <i class="glyphicon glyphicon-fire"></i>
+                        关于系统
+                    </a>--%>
+                    <a href="${pageContext.request.contextPath}/page/system/systemInfo.jsp" target="product-main">
                         <i class="glyphicon glyphicon-fire"></i>
                         关于系统
                     </a>

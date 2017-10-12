@@ -15,7 +15,7 @@
             </thead>
             <tr>
                 <td width="50%">ID</td>
-                <td width="50%">${user.id}</td>
+                <td width="50%">${user.userId}</td>
             </tr>
             <tr>
                 <td>用户名</td>

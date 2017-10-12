@@ -7,5 +7,7 @@
   	<mappers>
   		<mapper resource="com/xqkj/dao/mapper/UserDaoImpl.xml"></mapper>
 		<mapper resource="com/xqkj/dao/mapper/RazorProductDaoImpl.xml"></mapper>
+		<mapper resource="com/xqkj/dao/mapper/RoleDaoImpl.xml"></mapper>
+		<mapper resource="com/xqkj/dao/mapper/MenuDaoImpl.xml"></mapper>
   	</mappers>
 </configuration>

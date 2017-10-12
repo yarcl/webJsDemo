@@ -1,5 +1,6 @@
 package com.xqkj.service;
 
+import com.xqkj.bean.PageBean;
 import com.xqkj.bean.RazorProduct;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
  */
 public interface RazorProductService {
 
-    public List<RazorProduct> getRazorProductByUserId(String userId);
+    public List<RazorProduct> getRazorProductByUserId(String userId, PageBean pageBean);
 
+    public int getProductCount();
 }

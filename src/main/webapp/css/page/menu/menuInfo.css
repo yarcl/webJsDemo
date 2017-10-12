@@ -46,22 +46,22 @@ body{
     text-decoration: none;
 }
 
-.product-list th, .product-list td{
+.menu-list th, .menu-list td{
     text-align: center;
 }
 
-.product-list .product-title{
+.menu-list .menu-title{
     height: 40px;
     margin-left: 20px;
     border-bottom: solid;
     border-bottom-color: #71baf1;
 }
 
-.product-list .product-title div{
+.menu-list .menu-title div{
     float: left;
 }
 
-.product-list .product-title .razor-btn div{
+.menu-list .menu-title .razor-btn div{
     margin: 12px 0 10px 15px;
     width:40px;
     border-radius: 5px;
@@ -69,41 +69,42 @@ body{
     cursor: pointer;
 }
 
-.product-list .product-content{
+.menu-list .menu-content{
     margin: 20px 20px;
     background-color: #fff;
     clear: both;
     border-radius: 10px;
 }
 
-.product-list .product-page-tag *{
+.menu-list .product-page-tag *{
     margin:0 auto;
     text-align: center;
     font-size: 14px;
     color: black;
 }
 
-.product-list .product-find {
+.menu-list .menu-find {
     height: 40px;
     margin-left: 20px;
     font-size: 16px;
 }
 
-.product-list .product-find .product-condition{
+.menu-list .menu-find .menu-condition{
     padding-top: 15px;
 }
 
-.product-list .product-find .product-condition div{
+.menu-list .menu-find .menu-condition div{
     float: left;
     width: 26%;
     text-align: center;
 }
 
-.product-list .product-find .product-condition div.special{
+.menu-list .menu-find .menu-condition div.special{
     width:38%;
 }
 
-.product-list .product-find .product-condition div.img{
+.menu-list .menu-find .menu-condition div.img{
     width:6%;
     margin-top: -4px;
 }
+

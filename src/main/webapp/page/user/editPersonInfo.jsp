@@ -16,7 +16,7 @@
             <form action="${pageContext.request.contextPath}/user/editPersonInfo.do" method="post">
                 <tr>
                     <td width="50%">ID:</td>
-                    <td width="50%"><input type="text" name="id" value="${user.id}" required></td>
+                    <td width="50%"><input type="text" name="userId" value="${user.userId}" required></td>
                 </tr>
                 <tr>
                     <td>用户名:</td>

@@ -1,13 +1,20 @@
 package com.xqkj.service;
 
-import com.xqkj.bean.User;
+import com.xqkj.bean.PageBean;
+import com.xqkj.bean.RazorUser;
+
+import java.util.List;
 
 public interface UserService {
-    public User login(String username, String password);
+    public RazorUser login(String username, String password);
 
-    public int updateUser(User user);
+    public int updateUser(RazorUser user);
 
-    public User getUserById(int id);
+    public RazorUser getUserById(int id);
 
     public int updatePassword(String userId, String newPwd);
+
+    public List<RazorUser> getAllUsersInfo(PageBean pageBean);
+
+    public int getUserCount();
 }

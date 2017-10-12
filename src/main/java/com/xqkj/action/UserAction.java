@@ -1,6 +1,6 @@
 package com.xqkj.action;
 
-import com.xqkj.bean.User;
+import com.xqkj.bean.RazorUser;
 import com.xqkj.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,11 +21,11 @@ public class UserAction {
     private UserService userService;
 
     @RequestMapping(value = "/editPersonInfo.do", method = RequestMethod.POST)
-    public ModelAndView editUserInfo(User user, ModelAndView mav){
+    public ModelAndView editUserInfo(RazorUser user, ModelAndView mav){
 
         if(user!=null){
             int result = userService.updateUser(user);
-            user = userService.getUserById(user.getId());
+            user = userService.getUserById(user.getUserId());
             mav.addObject("user", user);
         }
         mav.setViewName("/page/user/personInfo.jsp");

@@ -4,8 +4,14 @@
   
 	<mapper namespace="com.xqkj.dao.UserDao">
 
-        <resultMap id="rm" type="com.xqkj.bean.User">
-            <id property="id" column="id"/>
+    
+    
+    <sql id="allColumn">
+        user_id, login_name, login_pwd, name, role_id, is_active
+    </sql>
+    
+        <resultMap id="rm" type="com.xqkj.bean.RazorUser">
+            <id property="userId" column="user_id"/>
             <result property="loginName" column="login_name"></result>
             <result property="loginPwd" column="login_pwd"></result>
             <result property="name" column="name"></result>
@@ -15,26 +21,46 @@
 
 		<select id="login"
 			resultMap="rm">
-				select * from user where login_name = #{param1} and
-				login_pwd = #{param2}
+				select
+				  <include refid="allColumn"/>
+				from RAZOR_USER where login_name = #{param1} and
+				  login_pwd = #{param2}
 		</select>
 
-        <update id="updateUser" parameterType="com.xqkj.bean.User">
+        <update id="updateUser" parameterType="com.xqkj.bean.RazorUser">
 
-            update user set login_name = #{loginName, jdbcType=VARCHAR},name = #{name},
-                            role_id = #{roleId}, is_active = #{isActive} where id = #{id}
+            update RAZOR_USER set login_name = #{loginName, jdbcType=VARCHAR},name = #{name},
+                            role_id = #{roleId}, is_active = #{isActive} where user_id = #{userId}
 
         </update>
 
         <select id="getUserById" resultMap="rm">
-            select * from user where id = #{id}
+            select
+             <include refid="allColumn"/>
+             from RAZOR_USER where user_id = #{userId}
         </select>
 
         <update id="updatePassword">
 
-            update user set login_pwd = #{param2, jdbcType=VARCHAR}
-                where id = #{param1}
+            update RAZOR_USER set login_pwd = #{param2, jdbcType=VARCHAR}
+                where user_id = #{param1}
 
         </update>
+
+    <select id="getAllUsersInfo" resultMap="rm">
+
+        select
+            <include refid="allColumn"/>
+        from
+          RAZOR_USER
+        limit #{param1}, #{param2}
+
+    </select>
+
+    <select id="getUserCount" resultType="int">
+
+        select count(1) from RAZOR_USER
+
+    </select>
 		
 	</mapper>

@@ -1,20 +1,20 @@
 package com.xqkj.bean;
 
-public class User {
+public class RazorUser {
 
-    private int id;
+    private int userId;
     private String loginName;
     private String loginPwd;
     private String name;
     private String roleId;
     private String isActive;
 
-    public User() {
+    public RazorUser() {
 
     }
 
-    public User(int id, String loginName, String loginPwd, String name, String roleId, String isActive) {
-        this.id = id;
+    public RazorUser(int userId, String loginName, String loginPwd, String name, String roleId, String isActive) {
+        this.userId = userId;
         this.loginName = loginName;
         this.loginPwd = loginPwd;
         this.name = name;
@@ -22,12 +22,12 @@ public class User {
         this.isActive = isActive;
     }
 
-    public int getId() {
-        return id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getLoginName() {
