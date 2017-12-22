@@ -23,7 +23,7 @@ CREATE TABLE `RAZOR_EVENT_DEFINATION` (
   `CREATE_DATE` datetime NOT NULL DEFAULT '1000-01-01 00:00:00',
   `ACTIVE` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`EVENT_ID`)
-)
+);
 
 CREATE TABLE `RAZOR_EVENT_TRACK` (
   `ER_ID` varchar(40) CHARACTER SET utf8 NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE `RAZOR_EVENT_TRACK` (
   `APPKEY` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
   `PRODUCT_ID` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`ER_ID`)
-)
+);
 
 
 CREATE TABLE `RAZOR_MENU` (
@@ -45,7 +45,7 @@ CREATE TABLE `RAZOR_MENU` (
   `is_delete` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`menu_id`)
-)
+);
 
 CREATE TABLE `RAZOR_PRODUCT` (
   `ID` varchar(20) CHARACTER SET utf8 NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE `RAZOR_PRODUCT` (
   `ACTIVE` int(11) NOT NULL DEFAULT '1',
   `PACKAGE_NAME` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`ID`)
-)
+);
 
 CREATE TABLE `RAZOR_ROLE` (
   `role_id` int(11) NOT NULL,
@@ -68,24 +68,24 @@ CREATE TABLE `RAZOR_ROLE` (
   `is_active` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `is_delete` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`role_id`)
-)
+);
 
 CREATE TABLE `RAZOR_USER` (
   `user_id` int(11) NOT NULL,
-  `login_name` varchar(40) DEFAULT NULL,
-  `login_pwd` varchar(100) DEFAULT NULL,
-  `name` varchar(40) DEFAULT NULL,
+  `login_name` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
+  `login_pwd` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
   `role_id` int(11) DEFAULT NULL,
   `is_active` int(11) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-)
+);
 
 CREATE TABLE `RAZOR_USER2PRODUCT` (
   `ID` varchar(20) CHARACTER SET utf8 NOT NULL,
   `USER_ID` varchar(20) CHARACTER SET utf8 NOT NULL,
   `PRODUCT_ID` varchar(20) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`ID`)
-)
+);
 
 -- ----------------------------
 -- Records of RAZOR_MENU
